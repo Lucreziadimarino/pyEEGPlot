@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyEEGPlot"
+version = "0.1.0"
+authors = [
+  { name="Lorenzo Bartoli", email="l.bartoli@studenti.unina.it" },
+  { name="Lucrezia Di Marino", email="lucrezia.dimarino2@unina.it" },
+]
+description = "A Python wrapper for EEGPlot.jl"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+dependencies = [
+    "julia",
+    "numpy<2.3",
+    "mne",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Project = "https://github.com/lore1907/pyEEGPlot.git"
+Documentation = "https://marco-congedo.github.io/EEGPlot.jl/dev/"
+
+
+[tool.setuptools.packages.find]
+include = ["pyEEGPlot", "pyEEGPlot.*"]
+exclude = ["Tests*", "assets*", "build*", "env*"]
+namespaces = false
